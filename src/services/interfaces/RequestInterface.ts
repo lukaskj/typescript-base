@@ -1,3 +1,1 @@
-export default interface RequestInterface {
-
-}
+export default interface RequestInterface {}

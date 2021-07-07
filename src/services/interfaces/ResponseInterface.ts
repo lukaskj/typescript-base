@@ -1,5 +1,1 @@
-
-
-export default interface ResponseInterface {
-
-}
+export default interface ResponseInterface {}
