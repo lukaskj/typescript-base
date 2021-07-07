@@ -14,7 +14,7 @@ interface InternalRequestInterface {
 
 export default abstract class AbstractService implements CallableInterface {
 
-    baseUrl: string = "https://app.omie.com.br/api/v1/";
+    baseUrl: string = env<string>("BASE_URL");
     abstract endpoint: string;
     abstract method: string;
 
