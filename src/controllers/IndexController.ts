@@ -1,5 +1,5 @@
 import { Get, JsonController, OnUndefined } from "routing-controllers";
-import env from "../util/env";
+import { env } from "../util/env";
 import JsonResponseInterface from "../util/JsonResponseInterface";
 
 @JsonController("/api/v1")

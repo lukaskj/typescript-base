@@ -1,5 +1,5 @@
 import axios from "axios";
-import env from "../util/env";
+import { env } from "../util/env";
 import CallableInterface from "./interfaces/CallableInterface";
 import RequestInterface from "./interfaces/RequestInterface";
 import ResponseInterface from "./interfaces/ResponseInterface";

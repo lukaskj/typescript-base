@@ -1,7 +1,7 @@
 import "reflect-metadata";
 
 import { createExpressServer } from "routing-controllers";
-import env from "./util/env";
+import { env } from "./util/env";
 
 const baseDir = __dirname;
 
