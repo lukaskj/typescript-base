@@ -1,9 +1,11 @@
 import "reflect-metadata";
 
 import { createExpressServer } from "routing-controllers";
-import { env } from "./util/env";
+import { Env, env } from "./util/env";
 
 const baseDir = __dirname;
+
+Env.warmup();
 
 const port: number = env<number>("PORT", 3000);
 
