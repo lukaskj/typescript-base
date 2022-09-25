@@ -1,6 +1,6 @@
 console.log("Main");
 
-export function toTest(variable: number) {
+export function toTest(variable: number): boolean {
   if (variable > 5) {
     return true;
   }
