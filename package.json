@@ -3,14 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "lukaskj",
-  "license": "MIT",
-  "engines": {
-    "node": "16.17.1",
-    "npm": "8.15.0"
-  },
+  "license": "ISC",
   "scripts": {
     "clean": "rimraf dist coverage .rollup.cache",
-    "prebuild": "rimraf dist && npm run lint",
+    "prebuild": "npm run clean && npm run lint",
     "build": "rollup -c rollup.config.js",
     "start": "npm run build && node dist/index.js",
     "start:dev": "ts-node ./src/index.ts",
@@ -46,5 +42,20 @@
     "ts-jest": "^29.0.1",
     "ts-node": "^10.9.1",
     "typescript": "^4.8.3"
-  }
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukaskj/typescript-base.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lukaskj/typescript-base/issues"
+  },
+  "homepage": "https://github.com/lukaskj/typescript-base#readme",
+  "files": [
+    "dist/**/*",
+    "!**/test/**"
+  ]
 }
