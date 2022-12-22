@@ -7,7 +7,7 @@
   "scripts": {
     "clean": "rimraf dist coverage .rollup.cache",
     "prebuild": "npm run clean && npm run lint",
-    "build": "rollup -c rollup.config.js",
+    "build": "rollup -c rollup.config.mjs",
     "start": "npm run build && node dist/index.js",
     "start:dev": "ts-node ./src/index.ts",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
