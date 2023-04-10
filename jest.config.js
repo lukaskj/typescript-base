@@ -1,8 +1,12 @@
 module.exports = {
-  testRegex: "./test/.*\\.(test|spec)?\\.(ts|tsx)$",
+  preset: "ts-jest",
   transform: {
     "^.+\\.ts?$": "ts-jest",
   },
+  moduleNameMapper: {
+    '^src/(.*)$': '<rootDir>/src/$1',
+  },
+  roots: ['./src'],
   testEnvironment: "node",
   moduleFileExtensions: ["js", "json", "ts"],
   collectCoverage: false,
@@ -10,6 +14,7 @@ module.exports = {
   coverageReporters: ["clover", "lcov", "text", "text-summary", "html"],
   collectCoverageFrom: [
     "src/**/*.{ts,tsx}",
+    '!**/index.ts',
     "!/dist/",
     "!/node_modules/",
     "!test/**/*",

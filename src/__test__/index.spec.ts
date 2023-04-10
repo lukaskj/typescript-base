@@ -1,4 +1,4 @@
-import { toTest } from "../src";
+import { toTest } from "../index";
 
 describe("Index", () => {
   it("Should work", () => {
