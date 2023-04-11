@@ -8,6 +8,7 @@ module.exports = {
   },
   roots: ['./src'],
   testEnvironment: "node",
+  testTimeout: 5000,
   moduleFileExtensions: ["js", "json", "ts"],
   collectCoverage: false,
   coverageDirectory: "<rootDir>/coverage",
