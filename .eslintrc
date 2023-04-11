@@ -16,7 +16,7 @@
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended"
   ],
-  "plugins": ["@typescript-eslint", "sonarjs", "filenames"],
+  "plugins": ["@typescript-eslint", "sonarjs"],
   "settings": {},
   "globals": {},
   "rules": {
@@ -33,9 +33,7 @@
       "error",
       { "max": 100, "skipBlankLines": true, "skipComments": true }
     ],
-    "require-atomic-updates": 1,
-    "filenames/match-regex": ["error", "^[a-zA-Z-]+(.test|.spec|.mock|.config)?$"],
-    "filenames/match-exported": "error"
+    "require-atomic-updates": 1
   },
   "overrides": [
     {
