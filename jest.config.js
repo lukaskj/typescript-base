@@ -1,21 +1,24 @@
 module.exports = {
   preset: "ts-jest",
   transform: {
-    "^.+\\.ts?$": "ts-jest",
+    "^.+\\.ts?$": [
+      "ts-jest",
+      {
+        isolatedModules: true,
+      },
+    ],
   },
   moduleNameMapper: {
-    '^src/(.*)$': '<rootDir>/src/$1',
+    "^src/(.*)$": "<rootDir>/src/$1",
   },
-  roots: ['./src'],
-  testEnvironment: "node",
+  roots: ["./src"],
   testTimeout: 5000,
-  moduleFileExtensions: ["js", "json", "ts"],
   collectCoverage: false,
   coverageDirectory: "<rootDir>/coverage",
   coverageReporters: ["clover", "lcov", "text", "text-summary", "html"],
   collectCoverageFrom: [
     "src/**/*.{ts,tsx}",
-    '!**/index.ts',
+    "!**/index.ts",
     "!/dist/",
     "!/node_modules/",
     "!test/**/*",
@@ -31,6 +34,5 @@ module.exports = {
       statements: 80,
     },
   },
-  testPathIgnorePatterns: ["/node_modules/", "<rootDir>/test/.*/fixtures/"],
-  watchPathIgnorePatterns: ["coverage"],
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
 };
