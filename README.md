@@ -8,7 +8,7 @@
 
 
 ### Scripts
-- `pnpm start` -> Runs the project using `tsx`
+- `pnpm start` -> Runs the project using `ts-node`
 - `pnpm build` -> builds the project using rollup
 - `pnpm test` -> tests
 - `pnpm test:watch` -> watch tests
@@ -17,4 +17,4 @@
 - `pnpm format` -> run prettier to format code
 
 
-Note: `npm` can be used intead of `yarn`
+Note: `npm` or `yarn` can be used intead of `pnpm`
