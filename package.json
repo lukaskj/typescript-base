@@ -6,8 +6,9 @@
   "license": "ISC",
   "scripts": {
     "clean": "rimraf dist coverage .rollup.cache",
-    "prebuild": "npm run clean && npm run lint",
+    "prebuild": "npm run clean",
     "build": "node esbuild/build.mjs",
+    "build:prod": "npm run lint && npm run build",
     "start": "ts-node ./src/index.ts",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\"",
