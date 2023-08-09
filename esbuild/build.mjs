@@ -1,5 +1,4 @@
 import * as esbuild from "esbuild";
-import * as packageJson from "../package.json" assert { type: "json" };
 
 const sharedConfig = {
   entryPoints: ["src/index.ts"],
@@ -17,9 +16,9 @@ const sharedConfig = {
   //   js: "import { createRequire } from 'module';const require = createRequire(import.meta.url);",
   // },
   // plugins: [esbuildDecorators()],
-  external: Object.keys(packageJson.default.dependencies).concat(
-    Object.keys(packageJson.default.peerDependencies || {}),
-  ),
+  // external: Object.keys(packageJson.default.dependencies).concat(
+  //   Object.keys(packageJson.default.peerDependencies || {}),
+  // ),
 };
 
 await esbuild.build({
