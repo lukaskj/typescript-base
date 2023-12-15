@@ -8,7 +8,7 @@ const sharedConfig = {
   minify: true,
   // platform: "node",
   // format: "esm",
-  // target: "es2016",
+  // target: "esnext",
   sourcemap: true,
   keepNames: true,
   logLevel: "info",
