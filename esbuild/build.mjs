@@ -5,9 +5,9 @@ const sharedConfig = {
   // outfile: "dist/index.mjs",
   bundle: true,
   treeShaking: true,
-  minify: true,
+  minify: false,
   // platform: "node",
-  // format: "esm",
+  format: "esm",
   // target: "esnext",
   sourcemap: true,
   keepNames: true,
@@ -23,7 +23,7 @@ const sharedConfig = {
 
 await esbuild.build({
   ...sharedConfig,
-  platform: "node", // for CJS
+  platform: "node",
   outfile: "dist/index.js",
 });
 
