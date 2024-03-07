@@ -2,7 +2,7 @@
   "compilerOptions": {
     "outDir": "./dist",
     "module": "commonjs",
-    "target": "ESNext",
+    "target": "ES2022",
     "moduleResolution": "node",
     "declaration": true,
     "removeComments": true,
@@ -11,8 +11,9 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "alwaysStrict": true,
-    "sourceMap": true,
-    "incremental": true,
+    "noEmit": true,
+    "noEmitOnError": true,
+    "incremental": false,
     "skipLibCheck": true,
     "strictNullChecks": true,
     "noImplicitAny": true,
@@ -25,8 +26,7 @@
     "esModuleInterop": true,
     "strictPropertyInitialization": true,
     "resolveJsonModule": true,
-    "noEmit": true
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "**/*/__test__", "*.spec.ts", "*.test.ts"]
 }
