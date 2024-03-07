@@ -24,7 +24,7 @@
     "noUnusedParameters": true /* Report errors on unused parameters. */,
     "noImplicitReturns": true /* Report error when not all code paths in function return a value. */,
     "esModuleInterop": true,
-    "strictPropertyInitialization": true,
+    "strictPropertyInitialization": false,
     "resolveJsonModule": true,
   },
   "include": ["src/**/*"],
