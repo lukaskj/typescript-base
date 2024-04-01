@@ -9,7 +9,8 @@
     "prebuild": "npm run clean",
     "build": "node esbuild/build.mjs",
     "build:prod": "npm run lint && npm run build",
-    "start": "tsx --watch ./src/index.ts",
+    "dev": "tsx --watch ./src/index.ts",
+    "start": "tsx ./src/index.ts",
     "format": "prettier --write src/",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "jest --config ./jest.config.js --maxWorkers=1",
@@ -18,6 +19,7 @@
     "test:debug": "-- node --inspect=0.0.0.0:5001 -r ts-node/register node_modules/jest/bin/jest.js --runInBand  --config ./jest.config.js",
     "prepare": "husky"
   },
+  "dependencies": {},
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
     "@types/jest": "^29.5.12",
