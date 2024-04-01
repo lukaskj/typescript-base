@@ -53,9 +53,5 @@
   "files": [
     "dist/**/*",
     "!**/test/**"
-  ],
-  "lint-staged": {
-    "*.ts": "eslint --fix",
-    "*.js": "eslint --fix"
-  }
+  ]
 }
