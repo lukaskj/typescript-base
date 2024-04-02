@@ -1,7 +1,8 @@
 {
   "name": "@lukaskj/typescript-base",
   "version": "2.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "author": "lukaskj",
   "license": "ISC",
   "scripts": {
@@ -42,7 +43,11 @@
     "typescript": "^5.4.3"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=20"
+  },
+  "bin": {
+    "typescript-base": "dist/index.js",
+    "tsc-base": "dist/index.js"
   },
   "repository": {
     "type": "git",
